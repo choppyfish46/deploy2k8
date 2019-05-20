@@ -16,7 +16,7 @@ node {
 
     stage('Kubernetes Setup'){
         try{
-            sh("kubectl create -f deploy_fhir.yml -v=8")
+            sh("kubectl create -f deploy_fhir.yml ")
         } catch(e) {
             notify("Something failed Kubernetes Setup")
             throw e;
